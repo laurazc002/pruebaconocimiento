@@ -1,7 +1,7 @@
 //Funcion para llenar dinamicamente
 //la tienda
 
-  export function llenarTienda() {
+  export function llenarTienda(productos) {
 
 
     let productos = [
@@ -25,44 +25,33 @@
     let fila = document.createElementById("fila")
 
     //2. Necesito recorrer un arreglo
-    productos.forEach(function () {
+    productos.forEach(function (productos) {
 
         //3. CREAMOS LOS ELEMENTOS NECESARIOS PARA PINTAR LOS PRODUCTOS
         let columna = document.createElement("col-4")
         columna.classList.add("col-md-12")
 
         let tarjeta = document.createElement("div")
-        tarjeta.classList.add("card")
-        tarjeta.classList.add("h-100")
+        tarjeta.classList.add("card", "h-100")
 
         let imagen = document.createElement("img")
-        imagen.classList.add("card-img-top")
-        imagen.classList.add("p-3")
-        imagen.classList.add("h-100")
+        imagen.classList.add("card-img-top","p-3","h-100")
         imagen.src = productos.foto
 
         let separador = document.getElementById("hr")
-        separador.classList.add("w-50")
-        separador.classList.add("mx-auto")
-        separador.classList.add("d-block")
+        separador.classList.add("w-50","mx-auto","d-block")
 
         let nombre = document.createElement("h5")
-        nombre.classList.add("fw-bold")
-        nombre.classList.add("text-center")
-        nombre.classList.add("mx-3")
+        nombre.classList.add("fw-bold","text-center","mx-3")
         nombre.textContent = productos.nombre
 
         let precio = document.createElement("h6")
-        precio.classList.add("text-center")
-        precio.classList.add("text-muted")
+        precio.classList.add("text-center" , "text-muted")
         precio.textContent = productos.precio
 
         let botonAmpliarInfo = document.createElement("button")
         botonAmpliarInfo.setAttribute("type", "button")
-        botonAmpliarInfo.classList.add("btn")
-        botonAmpliarInfo.classList.add("btn-outline-dark")
-        botonAmpliarInfo.classList.add("mx-3")
-        botonAmpliarInfo.classList.add("mb-3")
+        botonAmpliarInfo.classList.add("btn","btn-outline-dark","mx-3","mb-3")
         botonAmpliarInfo.textContent = "Ver producto"
 
 

@@ -25,7 +25,7 @@
     let fila = document.createElementById("fila")
 
     //2. Necesito recorrer un arreglo
-    productos.forEach(function (productos) {
+    productos.forEach(function (producto) {
 
         //3. CREAMOS LOS ELEMENTOS NECESARIOS PARA PINTAR LOS PRODUCTOS
         let columna = document.createElement("col-4")
@@ -36,18 +36,18 @@
 
         let imagen = document.createElement("img")
         imagen.classList.add("card-img-top","p-3","h-100")
-        imagen.src = productos.foto
+        imagen.src = producto.foto
 
-        let separador = document.getElementById("hr")
+        let separador = document.createElement("hr")
         separador.classList.add("w-50","mx-auto","d-block")
 
         let nombre = document.createElement("h5")
         nombre.classList.add("fw-bold","text-center","mx-3")
-        nombre.textContent = productos.nombre
+        nombre.textContent = producto.nombre
 
         let precio = document.createElement("h6")
         precio.classList.add("text-center" , "text-muted")
-        precio.textContent = productos.precio
+        precio.textContent = producto.precio
 
         let botonAmpliarInfo = document.createElement("button")
         botonAmpliarInfo.setAttribute("type", "button")
